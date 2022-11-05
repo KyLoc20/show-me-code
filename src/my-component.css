@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .tab {
+        @apply inline-flex items-center justify-center px-4 h-8 relative cursor-pointer select-none transition-all border-b-2 border-gray-500 text-[14px] leading-[28px] text-gray-700 border-opacity-20 text-opacity-20
+    }
+    .tab-active {
+        @apply border-opacity-100 text-opacity-100
+    }
+}

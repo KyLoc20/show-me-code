@@ -1,5 +1,7 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import MyTabDumbPage from "./pages/MyTabDumbPage";
+import MyTabSmartPage from "./pages/MyTabSmartPage";
+import MyTabSmartButControlledPage from "./pages/MyTabSmartButControlled";
 import BasicLayout from "./components/layouts/BasicLayout";
 
 export default function App() {
@@ -21,6 +23,10 @@ export default function App() {
         </Route>
         <Route path="/my-tab" element={<BasicLayout />}>
           <Route path="dumb" element={<MyTabDumbPage />} />
+          <Route path="smart" element={<MyTabSmartPage />} />
+          <Route path="smart-but-controlled" element={<MyTabSmartButControlledPage />} />
+          <Route path="dumb-or-smart" element={<MyTabSmartPage />} />
+          <Route path="all" element={<MyTabSmartPage />} />
         </Route>
       </Routes>
     </>

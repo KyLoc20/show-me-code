@@ -1,9 +1,9 @@
 import { useSearchParams, useNavigate } from "react-router-dom";
-import MyTab from "../components/Tab/MyTabDumb";
+import MyTab from "../components/Tab/MyTabSmart";
 
-export default function MyTabDumbPage() {
-  console.log("RENDER MyTabDumbPage");
-  const getPath = (status: string) => `/my-tab/dumb?status=${status}`;
+export default function MyTabSmartPage() {
+  console.log("RENDER MyTabSmartPage");
+  const getPath = (status: string) => `/my-tab/smart?status=${status}`;
 
   const navigate = useNavigate();
   const handleNavigate = (tabKeyName: string): void => {
