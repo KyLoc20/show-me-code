@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MyTab from "../components/Tab/MyTabDumbOrSmart";
+import { useStatusQueryParamSafely } from "../components/Tab/common";
 
 export default function MyTabDumbOrSmartPage() {
   console.log("RENDER MyTabDumbOrSmartPage");
@@ -11,15 +12,7 @@ export default function MyTabDumbOrSmartPage() {
     navigate(getPath(tabKeyName));
   };
 
-  // make sure the query param status to be valid
-  const [searchParams, _] = useSearchParams();
-  let status = searchParams.get("status") as "todo" | "doing" | "done";
-  if (!["todo", "doing", "done"].includes(status)) {
-    status = "todo";
-    navigate(getPath(status));
-  }
-
-  const currentTabKey = status;
+  const currentTabKey = useStatusQueryParamSafely(getPath);
   const tabItems = [{ key: "todo" }, { key: "doing" }, { key: "done" }];
 
   const [isTabControlled, setIsTabControlled] = useState(false);

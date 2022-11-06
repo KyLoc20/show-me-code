@@ -22,7 +22,7 @@ export default function App() {
                 routes for. */}
           <Route path="*" element={<NoMatch />} />
         </Route>
-        <Route path="/my-tab" element={<BasicLayout />}>
+        <Route path="/my-tab" element={<BasicLayout basePath="my-tab" />}>
           <Route path="dumb" element={<MyTabDumbPage />} />
           <Route path="smart" element={<MyTabSmartPage />} />
           <Route path="smart-but-controlled" element={<MyTabSmartButControlledPage />} />
