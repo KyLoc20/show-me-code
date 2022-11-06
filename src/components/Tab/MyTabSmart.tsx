@@ -7,7 +7,7 @@ export default function MyTabSmart({ items, activeKey, onChange }: MyTabProps) {
   const [innerActiveKey, setInnerActiveKey] = useState(activeKey != null ? activeKey : items[0].key);
   const currentActiveKey = innerActiveKey;
 
-  console.log("RENDER MyTabSmart currentActiveKey: ", currentActiveKey, "activeKey: ", activeKey);
+  // console.log("RENDER MyTabSmart currentActiveKey: ", currentActiveKey, "activeKey: ", activeKey);
 
   return (
     <>
@@ -25,6 +25,12 @@ export default function MyTabSmart({ items, activeKey, onChange }: MyTabProps) {
           </a>
         ))}
       </nav>
+      <p className="my-2">
+        Here is activeKey from props: <button className="btn btn-xs cursor-default">{activeKey}</button>
+      </p>
+      <p className="my-2">
+        Here is current active tab: <button className="btn btn-xs cursor-default">{currentActiveKey}</button>
+      </p>
       <ExampleContent items={items} currentActiveKey={currentActiveKey} />
     </>
   );

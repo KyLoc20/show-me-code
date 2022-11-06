@@ -6,7 +6,7 @@ export default function MyTabDumb({ items, activeKey, onChange }: MyTabProps) {
   const outerActiveKey = activeKey != null ? activeKey : items[0].key;
   const currentActiveKey = outerActiveKey;
 
-  console.log("RENDER MyTabDumb currentActiveKey: ", currentActiveKey, "activeKey: ", activeKey);
+  // console.log("RENDER MyTabDumb currentActiveKey: ", currentActiveKey, "activeKey: ", activeKey);
 
   return (
     <>
@@ -17,6 +17,12 @@ export default function MyTabDumb({ items, activeKey, onChange }: MyTabProps) {
           </a>
         ))}
       </nav>
+      <p className="my-2">
+        Here is activeKey from props: <button className="btn btn-xs cursor-default">{activeKey}</button>
+      </p>
+      <p className="my-2">
+        Here is current active tab: <button className="btn btn-xs cursor-default">{currentActiveKey}</button>
+      </p>
       <ExampleContent items={items} currentActiveKey={currentActiveKey} />
     </>
   );

@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import MyTab from "../components/Tab/MyTabSmart";
 import { useStatusQueryParamSafely } from "../components/Tab/common";
+import MyTabTemplate from "../components/Tab/MyTabTemplate";
 
 export default function MyTabSmartPage() {
-  console.log("RENDER MyTabSmartPage");
+  // console.log("RENDER MyTabSmartPage");
   const getPath = (status: string) => `/my-tab/smart?status=${status}`;
 
   const navigate = useNavigate();
@@ -14,5 +15,11 @@ export default function MyTabSmartPage() {
   const currentTabKey = useStatusQueryParamSafely(getPath);
   const tabItems = [{ key: "todo" }, { key: "doing" }, { key: "done" }];
 
-  return <MyTab items={tabItems} activeKey={currentTabKey} onChange={handleNavigate} />;
+  return (
+    <>
+      <MyTabTemplate currentTabKey={currentTabKey} currentPath={getPath(currentTabKey)}>
+        <MyTab items={tabItems} activeKey={currentTabKey} onChange={handleNavigate} />{" "}
+      </MyTabTemplate>
+    </>
+  );
 }

@@ -13,7 +13,7 @@ export default function MyTabDumbOrSmart({ items, activeKey, onChange, controlle
    */
   const currentActiveKey = controlledByOuter ? outerActiveKey : innerActiveKey;
 
-  console.log("RENDER MyTabDumbOrSmart controlledByOuter:", controlledByOuter, " currentActiveKey: ", currentActiveKey, " activeKey: ", activeKey);
+  // console.log("RENDER MyTabDumbOrSmart controlledByOuter:", controlledByOuter, " currentActiveKey: ", currentActiveKey, " activeKey: ", activeKey);
 
   return (
     <>
@@ -31,6 +31,12 @@ export default function MyTabDumbOrSmart({ items, activeKey, onChange, controlle
           </a>
         ))}
       </nav>
+      <p className="my-2">
+        Here is activeKey from props: <button className="btn btn-xs cursor-default">{activeKey}</button>
+      </p>
+      <p className="my-2">
+        Here is current active tab: <button className="btn btn-xs cursor-default">{currentActiveKey}</button>
+      </p>
       <ExampleContent items={items} currentActiveKey={currentActiveKey} />
     </>
   );
