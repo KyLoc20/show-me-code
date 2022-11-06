@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import MyTab from "../components/Tab/MyTabSmart";
 import { useStatusQueryParamSafely } from "../components/Tab/common";
-import MyTabTemplate from "../components/Tab/MyTabTemplate";
+import MyTabTemplate from "../templates/MyTabTemplate";
 
 export default function MyTabSmartPage() {
   // console.log("RENDER MyTabSmartPage");

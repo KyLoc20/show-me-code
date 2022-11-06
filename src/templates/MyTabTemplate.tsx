@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { BackIcon, ForwardIcon } from "./widgets";
+import { BackIcon, ForwardIcon } from "../components/Tab/widgets";
 
 export default function MyTabTemplate({ children, currentTabKey, currentPath }: PropsWithChildren<{ currentTabKey: string; currentPath: string }>) {
   const navigate = useNavigate();

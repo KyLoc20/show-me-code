@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MyTab from "../components/Tab/MyTabDumbOrSmart";
 import { useStatusQueryParamSafely } from "../components/Tab/common";
-import MyTabTemplate from "../components/Tab/MyTabTemplate";
+import MyTabTemplate from "../templates/MyTabTemplate";
 
 export default function MyTabDumbOrSmartPage() {
   // console.log("RENDER MyTabDumbOrSmartPage");
