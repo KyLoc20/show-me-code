@@ -6,7 +6,7 @@ export default function BlogTemplate({ children }: PropsWithChildren<{}>) {
     <>
       <div className="h-[130px]"></div>
       <div className="h-[70px]"></div>
-      <main className={clsx("blog-container", "flex flex-col max-w-[640px] mx-auto min-h-screen", "px-4")}>{children}</main>
+      <main className={clsx("blog-container", "flex flex-col max-w-[640px] mx-auto", "px-4")}>{children}</main>
     </>
   );
 }

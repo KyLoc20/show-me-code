@@ -7,8 +7,8 @@ export default function ShouldUseStateOrPropPage() {
         <h1>Should you use State or Props to decide your component's behavior?</h1>
       </header>
       <p>Hi</p>
-      <h2>12333</h2>
-      <p>12333</p>
+      {/* <h2>12333</h2>
+      <p>12333</p> */}
     </BlogTemplate>
   );
 }
