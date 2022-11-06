@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { MyTabProps } from "./types";
 import ExampleContent from "./ExampleContent";
+import GithubLink from "../GithubLink";
 
 export default function MyTabDumbOrSmart({ items, activeKey, onChange, controlled }: MyTabProps & { controlled?: boolean }) {
   const [innerActiveKey, setInnerActiveKey] = useState(activeKey != null ? activeKey : items[0].key);
@@ -31,7 +32,8 @@ export default function MyTabDumbOrSmart({ items, activeKey, onChange, controlle
           </a>
         ))}
       </nav>
-      <p className="my-2">
+      <p className="my-2 relative">
+        <GithubLink className="absolute right-0" href="https://github.com/KyLoc20/show-me-code/blob/master/src/components/Tab/MyTabDumbOrSmart.tsx" />
         Here is activeKey from props: <button className="btn btn-xs cursor-default">{activeKey}</button>
       </p>
       <p className="my-2">

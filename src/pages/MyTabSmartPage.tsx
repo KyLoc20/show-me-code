@@ -17,7 +17,11 @@ export default function MyTabSmartPage() {
 
   return (
     <>
-      <MyTabTemplate currentTabKey={currentTabKey} currentPath={getPath(currentTabKey)}>
+      <MyTabTemplate
+        currentTabKey={currentTabKey}
+        currentPath={getPath(currentTabKey)}
+        githubUrl="https://github.com/KyLoc20/show-me-code/blob/master/src/pages/MyTabSmartPage.tsx"
+      >
         <MyTab items={tabItems} activeKey={currentTabKey} onChange={handleNavigate} />{" "}
       </MyTabTemplate>
     </>

@@ -20,7 +20,11 @@ export default function MyTabDumbOrSmartPage() {
 
   return (
     <>
-      <MyTabTemplate currentTabKey={currentTabKey} currentPath={getPath(currentTabKey)}>
+      <MyTabTemplate
+        currentTabKey={currentTabKey}
+        currentPath={getPath(currentTabKey)}
+        githubUrl="https://github.com/KyLoc20/show-me-code/blob/master/src/pages/MyTabDumbOrSmartPage.tsx"
+      >
         <MyTab items={tabItems} activeKey={currentTabKey} onChange={handleNavigate} controlled={isTabControlled} />
       </MyTabTemplate>
       <div className="flex items-center p-2 mb-2">
